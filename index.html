@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 1) 引入响应式CSS文件 -->
+    <link rel="stylesheet" href="./libs/bootcss/css/bootstrap.css">
+    <title>旅游主题网站</title>
+    <!-- 设置SEO -->
+    <meta name="keywords" content="旅游,旅游攻略,景点推荐,....">
+    <meta name="description" content="一款在线推荐旅游路线的网站,.....">
+    <link rel="icon" href="./favicon.ico">
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入bootstrap图标样式文件 -->
+    <link rel="stylesheet" href="./libs/fontIcon/font/bootstrap-icons.css">
+
+    <!-- 引入swiper样式 -->
+    <!-- <link rel="stylesheet" href="./libs/swiper/css/swiper.css"> -->
+    <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- 顶部 (Boot框架使用短横线“-”，自定义就使用下划线“_”)-->
+        <div class="tt_index_top clearfix">
+            <div class="tt_left float-left"><span>旅游 LOGO</span></div>
+            <div class="tt_right float-right">
+                <button class="btn btn_link">+020 88886666</button>
+                <button class="btn btn_lang ">En</button>
+                <button class="btn btn_make">一键定制</button>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <div class="tt_index_nav container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- 链接 -->
+                <a class="navbar-brand" href="#">
+                    <!-- 品牌 -->
+                </a>
+                <!-- 折叠按钮 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- 导航 -->
+                    <ul class="navbar-nav mr-auto tt_navbar_nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">首页</a>
+                        </li>
+
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span>目的地</span>
+                                <i></i>
+                            </a>
+                            <div class="dropdown-menu tt_menu">
+                                <!-- 国家列表 -->
+                                <div class="tt_country_list">
+                                    <ul>
+                                        <li class="a">亚洲</li>
+                                        <li>中国</li>
+                                        <li>越难</li>
+                                        <li>缅甸</li>
+                                        <li>泰国</li>
+                                        <li>老挝</li>
+                                        <li>不丹</li>
+                                        <li>柬埔寨</li>
+                                        <li>马来西亚</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="b">亚洲</li>
+                                        <li>中国</li>
+                                        <li>越难</li>
+                                        <li>缅甸</li>
+                                        <li>泰国</li>
+                                        <li>老挝</li>
+                                        <li>不丹</li>
+                                        <li>柬埔寨</li>
+                                        <li>马来西亚</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="c">亚洲</li>
+                                        <li>中国</li>
+                                        <li>越难</li>
+                                        <li>缅甸</li>
+                                        <li>泰国</li>
+                                        <li>老挝</li>
+                                        <li>不丹</li>
+                                        <li>柬埔寨</li>
+                                        <li>马来西亚</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="d">亚洲</li>
+                                        <li>中国</li>
+                                        <li>越难</li>
+                                        <li>缅甸</li>
+                                        <li>泰国</li>
+                                        <li>老挝</li>
+                                        <li>不丹</li>
+                                        <li>柬埔寨</li>
+                                        <li>马来西亚</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="e">亚洲</li>
+                                        <li>中国</li>
+                                        <li>越难</li>
+                                        <li>缅甸</li>
+                                        <li>泰国</li>
+                                        <li>老挝</li>
+                                        <li>不丹</li>
+                                        <li>柬埔寨</li>
+                                        <li>马来西亚</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span>我们的旅行</span>
+                                <i></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">探险</a>
+                                <a class="dropdown-item" href="#">海滩度假</a>
+                                <a class="dropdown-item" href="#">城市印象</a>
+                                <a class="dropdown-item" href="#">游轮</a>
+                                <a class="dropdown-item" href="#">教育</a>
+                                <a class="dropdown-item" href="#">家庭旅游</a>
+                                <a class="dropdown-item" href="#">蜜月</a>
+                                <a class="dropdown-item" href="#">个人旅游</a>
+                                <a class="dropdown-item" href="#">Safari</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">精选酒店</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span>关于我们</span>
+                                <i></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">我们的故事</a>
+                                <a class="dropdown-item" href="#">优秀团队</a>
+                                <a class="dropdown-item" href="#">客户评价</a>
+                                <a class="dropdown-item" href="#">合作伙伴</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- 表单 -->
+                    <form class="form-inline my-2 my-lg-0 tt_form">
+                        <input class="form-control mr-sm-2 tt_button" type="search" placeholder="搜索"
+                            aria-label="Search">
+                        <i class="bi bi-search tt_icon_search"></i>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <!-- 轮播图 -->
+        <div class="tt_index_banner">
+            <div id="carouselExampleSlidesOnly" class="carousel slide index_banner" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#">
+                            <img src="./images/banner1.jpg" alt="1">
+                            <div class="text">
+                                <p>People don't take trips,trips take people</p>
+                                <p>非庄生梦蝶，蝶梦庄生也</p>
+                                <p>- John Steinbeck</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="./images/banner2.jpeg" alt="2">
+                            <div class="text">
+                                <p>People don't take trips,trips take people</p>
+                                <p>非庄生梦蝶，蝶梦庄生也</p>
+                                <p>- John Steinbeck</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="./images/banner3.jpeg" alt="3">
+                            <div class="text">
+                                <p>People don't take trips,trips take people</p>
+                                <p>非庄生梦蝶，蝶梦庄生也</p>
+                                <p>- John Steinbeck</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 目的地 -->
+        <div class="tt_index_place">
+            <div class="title">
+                <div class="title_name">目的地</div>
+                <div class="title_bg"></div>
+            </div>
+            <div class="place_list">
+                <!-- 栅格布局 -->
+                <div class="container">
+                    <div class="row">
+                        <!-- col-6 超小屏幕以上 以及小屏幕一行两列；col-md-3 中等屏幕一行四列；-->
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_1.jpg" alt="1">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_2.jpg" alt="2">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_3.jpg" alt="3">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_4.jpg" alt="4">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_5.jpg" alt="5">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_6.jpg" alt="6">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_7.jpg" alt="7">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="#">
+                                <img src="./images/p_img_8.jpg" alt="8">
+                                <p>希腊</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="link_more">
+                <a href="#" class="btn"> 更多国家 </a>
+            </div>
+        </div>
+
+        <!-- 推荐的行程 -->
+        <div class="tt_index_recommand">
+            <div class="title">
+                <div class="title_name">推荐的行程</div>
+                <div class="title_bg"></div>
+            </div>
+            <div class="recommand_main">
+                <!-- 中等屏幕以上 一行三列； 小屏幕以及特小屏幕 一行一列 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_1.jpg" alt="1">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_2.jpg" alt="2">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_3.jpg" alt="3">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_4.jpg" alt="4">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_5.jpg" alt="5">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="box-top">
+                                    <img src="./images/t_img_6.jpg" alt="6">
+                                    <p>托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡纳艳阳下托斯卡</p>
+                                </div>
+                                <div class="box-mid clearfix">
+                                    <div class="float-left left">7天</div>
+                                    <div class="float-right right">
+                                        <span>RMB</span>
+                                        <span>15800起</span>
+                                    </div>
+                                </div>
+                                <div class="box-foot">
+                                    <p>
+                                        托斯卡纳位于意大利的中部，是意大利最美的大区，这里美丽的风景让人流连忘返...
+                                    </p>
+                                    <div>
+                                        <a href="#" class="btn btn-sm">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link_more">
+                <a href="#" class="btn"> 更多行程 </a>
+            </div>
+        </div>
+
+        <!-- 旅行类型 -->
+        <div class="tt_index_type">
+            <div class="title">
+                <div class="title_name">旅行类型</div>
+                <div class="title_bg"></div>
+            </div>
+            <div class="type_bannner">
+                <!-- 课堂演示 -->
+                <div class="container d-none">
+                    <!-- 左边按钮 -->
+                    <div class="left">
+                        <button><i class="bi bi-chevron-left"></i></button>
+                    </div>
+                    <!-- 图片列表 -->
+                    <div class="mid">
+                        <!-- swiper轮播图 -->
+                        <div class="photo">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_1.jpg" alt="1">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_2.jpg" alt="2">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_3.jpg" alt="3">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_4.jpg" alt="4">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_5.jpg" alt="5">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/type_6.jpg" alt="6">
+                                            <p>文字</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右边按钮 -->
+                    <div class="right">
+                        <button><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 参考素材中 -->
+                <div class="container">
+                    <div class="blue_type">
+                        <!-- swiper插件 -->
+                        <div class="swiper-container swiper-container-horizontal">
+                            <div class="swiper-wrapper"
+                                style="transform: translate3d(-989px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="0">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_1.jpg" alt="">
+                                        </div>
+                                        <p>家庭出游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="1">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_2.jpg" alt="">
+                                        </div>
+                                        <p>个人旅游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="2">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_3.jpg" alt="">
+                                        </div>
+                                        <p>探险</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="3">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_4.jpg" alt="">
+                                        </div>
+                                        <p>蜜月度假</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="4">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_5.jpg" alt="">
+                                        </div>
+                                        <p>蜜月</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="5">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_6.jpg" alt="">
+                                        </div>
+                                        <p>城市</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-active"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="0">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_1.jpg" alt="">
+                                        </div>
+                                        <p>家庭出游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="1">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_2.jpg" alt="">
+                                        </div>
+                                        <p>个人旅游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 144.833px; margin-right: 20px;"
+                                    data-swiper-slide-index="2">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_3.jpg" alt="">
+                                        </div>
+                                        <p>探险</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 144.833px; margin-right: 20px;"
+                                    data-swiper-slide-index="3">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_4.jpg" alt="">
+                                        </div>
+                                        <p>蜜月度假</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 144.833px; margin-right: 20px;"
+                                    data-swiper-slide-index="4">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_5.jpg" alt="">
+                                        </div>
+                                        <p>蜜月</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate-prev"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="5">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_6.jpg" alt="">
+                                        </div>
+                                        <p>城市</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="0">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_1.jpg" alt="">
+                                        </div>
+                                        <p>家庭出游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="1">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_2.jpg" alt="">
+                                        </div>
+                                        <p>个人旅游</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="2">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_3.jpg" alt="">
+                                        </div>
+                                        <p>探险</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="3">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_4.jpg" alt="">
+                                        </div>
+                                        <p>蜜月度假</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="4">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_5.jpg" alt="">
+                                        </div>
+                                        <p>蜜月</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate"
+                                    style="width: 144.833px; margin-right: 20px;" data-swiper-slide-index="5">
+                                    <a href="javascript:;">
+                                        <div class="blue_img">
+                                            <img src="./images/type_6.jpg" alt="">
+                                        </div>
+                                        <p>城市</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button swiper-button-next">
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 与众不同 -->
+        <div class="tt_index_box d-none">
+            <div class="title">
+                <div class="title_name">是什么让我们与众不同</div>
+                <div class="title_bg"></div>
+            </div>
+        </div>
+
+
+        <!-- 右侧内容 -->
+        <div class="tt_index_aside">
+            <div class="handle-box wechat"><i></i></div>
+            <div class="handle-box email"><i></i></div>
+            <!-- 隐藏内容 -->
+            <section class="item">
+                <div class="box">
+                    <img src="./images/code_1.jpg" alt="1">
+                    <p>扫描二维码即刻关注我们</p>
+                </div>
+            </section>
+            <section class="show item item-content">
+                 <div class="txt">
+                    <p>地址:广州市黄埔区TCL-B402号</p>
+                    <p>东亚望京中心B座3802</p>
+                 </div>
+                 <div  class="txt mt-3">
+                    <p>电话: +86-010-8476-6802</p>
+                    <p>邮箱: contactus@bluespiritvoyages.com</p>
+                 </div>
+            </section>
+        </div>
+
+
+        <!-- 底部 -->
+    </div>
+
+    <!-- JavaScript 文件是可选的。 -->
+    <!-- 2) 引入jquery文件 -->
+    <script src="./libs/jquery@3.5.1/jquery-3.5.1.js"></script>
+    <!-- 3) 引入bootstrap文件 -->
+    <script src="./libs/bootcss/js/bootstrap.bundle.js"></script>
+
+    <!-- 引入swiper脚本 -->
+    <!-- <script src="./libs/swiper/js/swiper.js"></script> -->
+    <script src="./libs/swiper/swiper.min.js"></script>
+    <!-- 引入index.js文件 -->
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
