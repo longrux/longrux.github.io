@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贪吃蛇-首页</title>
+    <!-- SEO: 搜索引擎优化 -->
+    <!-- <meta name="description" content="描述网页的文本"> -->
+    <meta name="description" content="Javascript游戏, 网页游戏，贪吃蛇">
+    <!-- <meta name="keywords" content="关键字1,关键字2,...."> -->
+    <meta name="keywords" content="网页游戏，贪吃蛇">
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container snake clearfix">
+         <div class="left">
+             <div class="map">
+                 <!-- 动态创建 -->
+             </div>
+         </div>
+         <div class="right">
+            <div class="content">
+                <div class="score">
+                    得分: <span>0</span>
+                </div>
+                <div class="butt">
+                     <button id="start" class="">开始</button>
+                     <button id="pause">暂停</button>
+                     <button id="refresh">刷新</button>
+                </div>
+                <div class="downtime">
+                    计时: <span>00:30:00</span>
+                </div>
+            </div>
+            <div class="content">
+                 <a class="link" href="./form.html">设置游戏参数</a>
+            </div>
+         </div>
+    </div>
+
+    <script src="./js/snakeV2.js"></script>
+</body>
+
+</html>
