@@ -1,49 +1,224 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>贪吃蛇-首页</title>
-    <!-- SEO: 搜索引擎优化 -->
-    <!-- <meta name="description" content="描述网页的文本"> -->
-    <meta name="description" content="Javascript游戏, 网页游戏，贪吃蛇">
-    <!-- <meta name="keywords" content="关键字1,关键字2,...."> -->
-    <meta name="keywords" content="网页游戏，贪吃蛇">
-    <!-- 初始化样式 -->
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <title>个人介绍</title>
+   
+    <!-- <link rel="stylesheet" href="./projectv1.0.0/libs/bootcss/css/bootstrap.css"> -->
+    <link rel="icon" href="./projectv1.0.0/images/reddit.svg">
+    <style>
+        /* 基本样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        /* 左侧样式 */
+        .left {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .left img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .left h2 {
+            color: #4A90E2;
+            margin-bottom: 10px;
+        }
+
+        .left p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .left .title {
+            font-weight: bold;
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        /* 右侧样式 */
+        .right {
+            flex: 2 1 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .right h2 {
+            color: #4A90E2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f4f7fc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .project h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left, .right {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .project {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
 </head>
-
 <body>
-    <div class="container snake clearfix">
-         <div class="left">
-             <div class="map">
-                 <!-- 动态创建 -->
-             </div>
-         </div>
-         <div class="right">
-            <div class="content">
-                <div class="score">
-                    得分: <span>0</span>
-                </div>
-                <div class="butt">
-                     <button id="start" class="">开始</button>
-                     <button id="pause">暂停</button>
-                     <button id="refresh">刷新</button>
-                </div>
-                <div class="downtime">
-                    计时: <span>00:30:00</span>
+
+    <div class="container">
+        <!-- 左侧个人信息 -->
+        <div class="left">
+            <img src="./projectv1.0.0/images/txiang.jpg" alt="头像">
+            <h3>龙汝响</h3>
+            <p class="title">大数据技术</p>
+            <p></p>
+
+        </div>
+
+        <!-- 右侧项目介绍 -->
+        <div class="right">
+            <h2>项目经验</h2>
+
+            <!-- Vue 2 项目 -->
+            <div class="project">
+                <img src="./projectv1.0.0/images/1.jpg"  alt="项目图标">
+                <div>
+                    <h3>js游戏案例:贪吃蛇</h3>
+                    <p>这是一个基于js开发的小游戏案例,能控制蛇上下移动，并支持设置游戏参数</p>
+                    <a href="./snake.html" ">试试看！</a>
                 </div>
             </div>
-            <div class="content">
-                 <a class="link" href="./form.html">设置游戏参数</a>
+
+            <!-- Vue 3 项目 -->
+            <div class="project">
+                <img src="./projectv1.0.0/images/luyou.png" alt="项目图标">
+                <div>
+                    <h3>bootstrap响应式页面:旅游网站首页</h3>
+                    <p>使用Bootstrap库和jq库以及swipet库</p>
+                    <a href="./projectv1.0.0/luyou.html">查看代码</a>
+                </div>
             </div>
-         </div>
+
+            <!-- 小程序项目 -->
+            <div class="project">
+                <img src="https://via.placeholder.com/80" alt="项目图标">
+                <div>
+                    <h3>小程序项目：餐厅预订</h3>
+                    <p>一个餐厅预订的小程序，支持用户查看菜单、选择座位和提前预定。</p>
+                    <a href="./demo.html"">查看代码</a>
+                </div>
+            </div>
+
+            <!-- UniApp 项目 -->
+            <div class="project">
+                <img src="https://via.placeholder.com/80" alt="项目图标">
+                <div>
+                    <h3>UniApp 项目：跨平台社交应用</h3>
+                    <p>使用 UniApp 开发的跨平台社交应用,支持微信、支付宝、APP 等多个平台。</p>
+                    <a href="./demo.html">查看代码</a>
+                </div>
+            </div>
+
+            <!-- 鸿蒙项目 -->
+            <div class="project">
+                <img src="https://via.placeholder.com/80" alt="项目图标">
+                <div>
+                    <h3>鸿蒙项目：智能家居控制</h3>
+                    <p>基于鸿蒙系统开发的智能家居控制应用，支持远程控制家居设备、监控家居状态等。</p>
+                    <a href="./demo.html">查看代码</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <script src="./js/snakeV2.js"></script>
+  
 </body>
-
 </html>
+

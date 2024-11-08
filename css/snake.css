@@ -5,13 +5,12 @@ body , html {
     background-color: #000;
 }
 body {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../projectv1.0.0/images/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .container {
     width: 1200px;
-    /* 面试题：如何居中一个元素？ (7种方式)*/
     position: fixed;
     top: 50%;
     left: 50%;

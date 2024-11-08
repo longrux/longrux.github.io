@@ -1,0 +1,659 @@
+#app {
+    font-size: 16px;
+    min-width: 320px;
+}
+
+/*  顶部  */
+.tt_index_top {
+    background-color: #374356;
+    height: 60px;
+}
+
+.tt_index_top .tt_left {
+    margin-top: 18px;
+    margin-left: 50px;
+    margin-bottom: 18px;
+}
+
+.tt_index_top .tt_left span {
+    color: #fff;
+}
+
+.tt_index_top .tt_right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+.tt_index_top .tt_right .btn_link {
+    color: #f0f0f0;
+}
+
+.tt_index_top .tt_right .btn_lang {
+    background-color: rgba(255, 255, 255, .5);
+    color: #f0f0f0;
+}
+
+.tt_index_top .tt_right .btn_lang:hover {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.tt_index_top .tt_right .btn_make {
+    background-color: #c19b76;
+    color: #fff;
+}
+
+/* 当bootstrap的工具类满足不了我们的需要的时候，我们就采用媒体查询属性做响应式 */
+@media (max-width: 767px) {
+    .tt_index_top .float-right .btn_lang {
+        display: none;
+    }
+}
+
+
+/* 导航 */
+.tt_index_nav .tt_form {
+    position: relative;
+}
+
+.tt_index_nav .tt_form .tt_icon_search {
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    color: #ccc;
+}
+
+.tt_index_nav .tt_form .tt_button {
+    border-radius: 10px;
+}
+
+/* 点击“审查元素” 选择要修改的标签，复制bootstrap的选择器代码，进行样式的修改。*/
+.tt_index_nav .navbar-light .navbar-nav .nav-link {
+    margin: 0 25px;
+}
+
+/* 媒体查询 */
+@media (max-width:1200px) {
+    .tt_index_nav .navbar-light .navbar-nav .nav-link {
+        margin: 0 10px;
+    }
+}
+
+.tt_index_nav .navbar-nav {
+    margin-left: 50px;
+}
+
+.tt_index_nav .navbar-nav .dropdown-menu {
+    border-radius: 0px !important;
+}
+
+.tt_index_nav .navbar-light .navbar-nav .show>.nav-link,
+.tt_index_nav .navbar-light .navbar-nav .active>.nav-link,
+.tt_index_nav .navbar-light .navbar-nav .nav-link.show,
+.tt_index_nav .navbar-light .navbar-nav .nav-link.active {
+    color: #c09b75;
+}
+
+.tt_index_nav .navbar-nav>li>.dropdown-menu {
+    border: 0px !important;
+    background-color: #4d5c76;
+}
+
+.tt_index_nav .dropdown-item {
+    display: block;
+    color: #fff;
+}
+
+.tt_index_nav .dropdown-item:hover,
+.tt_index_nav .dropdown-item:focus {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+
+.tt_country_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* 修改过的代码 */
+@media (max-width: 991px) {
+    .tt_index_nav .navbar-nav {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .tt_country_list {
+        padding-right: 0px;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+
+    .tt_country_list ul {
+        margin-right: 10px;
+        padding-top: 10px;
+        ;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width:992px) {
+    .tt_menu {
+        width: 100%;
+        position: fixed !important;
+        top: 112px;
+        left: 0;
+        padding-right: 300px;
+    }
+}
+
+.tt_country_list ul {
+    margin-right: 40px;
+    padding-top: 10px;
+    ;
+    flex-shrink: 0;
+}
+
+.tt_country_list ul li {
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+}
+
+.tt_country_list ul li.a {
+    color: yellowgreen;
+}
+
+.tt_country_list ul li.b {
+    color: deepskyblue;
+}
+
+.tt_country_list ul li.c {
+    color: orange;
+}
+
+.tt_country_list ul li.d {
+    color: deeppink;
+}
+
+.tt_country_list ul li.e {
+    color: plum;
+}
+
+/* 轮播图区域 */
+.tt_index_banner {
+    width: 100%;
+}
+
+.tt_index_banner .carousel-item a {
+    display: block;
+    position: relative;
+}
+
+.tt_index_banner .carousel-item a img {
+    width: 100%;
+    display: block;
+}
+
+.tt_index_banner .carousel-item a .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -98px;
+    color: #fff;
+    text-align: center;
+}
+
+.tt_index_banner .carousel-item a .text p {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+/* 媒体查询 */
+@media (max-width:1200px) {
+    .tt_index_banner .carousel-item a .text {
+        margin-top: -74px;
+    }
+
+    .tt_index_banner .carousel-item a .text p {
+        font-size: 26px;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width:768px) {
+    .tt_index_banner .carousel-item a .text {
+        margin-top: -56px;
+    }
+
+    .tt_index_banner .carousel-item a .text p {
+        font-size: 22px;
+        padding: 2px 0;
+    }
+}
+
+@media (max-width:567px) {
+    .tt_index_banner .carousel-item a .text {
+        margin-top: -40px;
+    }
+
+    .tt_index_banner .carousel-item a .text p {
+        font-size: 15px;
+    }
+}
+
+/* 这个样式可重复使用 */
+.title {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.title_name {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.title_bg {
+    width: 70px;
+    height: 10px;
+    background-image: url(../images/adorn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 8px auto;
+}
+
+/* 目的地 */
+.tt_index_place {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.tt_index_place .place_list {
+    width: 100%;
+}
+
+.tt_index_place .place_list a {
+    width: 100%;
+    display: block;
+    /* 10px 内边距（补白） */
+    padding: 10px 0px;
+    position: relative;
+}
+
+.tt_index_place .place_list a img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.tt_index_place .place_list a p {
+    position: absolute;
+    /* width: calc(100% - 20px); */
+    width: 100%;
+    bottom: 10px;
+    left: 0px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .5);
+    /* 改变盒子大小的计算方式 */
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 公共样式 */
+.link_more {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.link_more .btn {
+    border: 1px solid #c09b75;
+    color: #c09b75;
+}
+
+.link_more .btn:hover {
+    border: 1px solid #c09b75;
+    color: #ffffff;
+    background-color: #c09b75;
+}
+
+/* 推荐的行程 */
+.tt_index_recommand {
+    width: 100%;
+    background-image: url(../images/bg.jpg);
+    padding-bottom: 20px;
+}
+
+.recommand_main {
+    width: 100%;
+}
+
+.recommand_main .box {
+    padding: 10px 0px;
+}
+
+.recommand_main .box .box-top {
+    width: 100%;
+    position: relative;
+}
+
+.recommand_main .box .box-top img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.recommand_main .box .box-top p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    stroke-linejoin: 1.75;
+    padding: 5px 15px;
+    /* 文本阴影 */
+    text-shadow: 0px 2px 2px #000;
+}
+
+.recommand_main .box .box-mid {
+    background-color: #374356;
+    color: #fff;
+    padding: 10px 8px;
+}
+
+.recommand_main .box .box-foot {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+/* 
+
+遇到文本溢出变省略号
+打开“搜索”，输入“CSS 溢出隐藏 变成省略号” 按回车找答案
+*/
+.recommand_main .box .box-foot p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.recommand_main .box .box-foot div {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.recommand_main .box .box-foot div .btn {
+    border: 1px solid #c09b75;
+    color: #ffffff;
+    background-color: #c09b75;
+    font-size: 12px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* 旅行类型 */
+.tt_index_type {
+    width: 100%;
+}
+/* 
+.tt_index_type .container {
+    display: flex;
+}
+
+.tt_index_type .container .left,
+.tt_index_type .container .right {
+    width: 5%;
+    height: 150px;
+    background-color: #dedede;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tt_index_type .container .left button,
+.tt_index_type .container .right button {
+    background-color: transparent !important;
+    font-size: 40px;
+    color: #fff;
+}
+
+.tt_index_type .container .mid {
+    width: 90%;
+    padding: 0 15px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.tt_index_type .container .mid .photo {
+    width: 100%;
+    height: 200px;
+    overflow-x: hidden;
+}
+.tt_index_type .container .mid a {
+    display: block;
+    width: 100%;
+    padding: 0px 8px;
+}
+.tt_index_type .container .mid a img {
+    width: 100%;
+    border-radius: 5px;
+}
+.tt_index_type .container .mid a p {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.tt_index_type .container .mid a p:hover {
+    color: #c09b75;
+}
+@media (max-width: 1000px) {
+
+    .tt_index_type .container .left,
+    .tt_index_type .container .right {
+        width: 7%;
+    }
+
+    .tt_index_type .container .mid {
+        width: 86%;
+    }
+    .tt_index_type .container .left button,
+    .tt_index_type .container .right button {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tt_index_type .container .left,
+    .tt_index_type .container .right {
+        width: 6%;
+    }
+    .tt_index_type .container .mid {
+        width: 88%;
+    }
+
+    .tt_index_type .container .left button,
+    .tt_index_type .container .right button {
+        font-size: 22px;
+    }
+}
+
+ */
+
+
+.blue_type {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.blue_type .swiper-container {
+    width: 85%;
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.blue_type .blue_img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+.blue_type p {
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+    color: #333333;
+}
+
+.swiper-button {
+    background: #dedede;
+    width: 5% !important;
+    height: calc(100% - 40px) !important;
+    color: #FFFFFF !important;
+    top: auto;
+    bottom: 40px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 26px;
+    text-align: center;
+}
+.swiper-button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.swiper-button:hover {
+    background: #cccccc;
+}
+
+/* 右侧栏内容 */
+.tt_index_aside {
+    width: 70px;
+    height: 180px;
+    /* background-color: #2c333e; */
+    position: fixed;
+    top: 50%;
+    margin-top: -90px;
+    right: 0px;
+    z-index: 1000;
+}
+.tt_index_aside > div {
+    width: 100%;
+    height: 90px;
+    /* border: 1px solid #fff; */
+    text-align: center;
+    line-height: 90px;
+    position: absolute;
+    left: 0;
+    z-index: 100000;
+    background-color: #2c333e;
+    /* 盒子阴影 */
+    box-shadow: -3px 0px  5px  #333;
+   
+}
+.tt_index_aside .wechat {
+    top: 0;
+    border-top-left-radius: 10px;
+    
+}
+.tt_index_aside .email {
+    top: 90px;
+    border-bottom-left-radius: 10px;
+}
+.tt_index_aside > div  i {
+    display: inline-block;
+    vertical-align: middle;
+    /* background-color: red; */
+    background-size: cover;
+}
+.tt_index_aside .wechat i {
+    width: 26px;
+    height: 24px;
+    background-image: url(../images/icon-wx.png);
+}
+.tt_index_aside .wechat:hover i {
+    width: 26px;
+    height: 24px;
+    background-image: url(../images/icon-wx-hover.png);
+}
+
+.tt_index_aside .email i {
+    width: 24px;
+    height: 15px;
+    background-image: url(../images/icon-mail.png);
+}
+.tt_index_aside .email:hover i {
+    width: 24px;
+    height: 15px;
+    background-image: url(../images/icon-mail-hover.png);
+}
+.tt_index_aside .item {
+    display: block;
+    width: 300px;
+    height: 180px;
+    background-color: #4f555e;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    /* left: -280px; */
+    z-index: 1000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+}
+.tt_index_aside .item .box {
+    width: 280px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tt_index_aside .item .box img {
+    width: 80px;
+}
+.tt_index_aside .item .box p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+.tt_index_aside .item .txt {
+    font-size: 14px;
+    padding: 0px 20px 0px;
+}
+.tt_index_aside .item-content {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}

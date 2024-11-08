@@ -23,5 +23,5 @@ btn.addEventListener('click',function(){
     var str = `?row=${row}&col=${col}&width=${width}&height=${height}`;
 
     // 跳转页面
-    location.href = './index.html'+str;
+    location.href = './snake.html'+str;
 })
