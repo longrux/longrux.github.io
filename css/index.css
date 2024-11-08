@@ -1,0 +1,101 @@
+body , html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    width: 1200px;
+    /* 面试题：如何居中一个元素？ (7种方式)*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* margin-left: -600px; */
+    /* margin-top: -330px; */
+    /* CSS3 转换：位移 */
+    transform: translateX(-50%)translateY(-50%);
+}
+.snake .left {
+    float: left;
+    padding: 30px;
+    width: 800px;
+    /* height: 600px; */
+    background-color: rgba(240, 240, 240,.85);
+}
+.snake .left .map {
+    /* width: 800px; */
+    /* height: 600px; */
+    background-color: rgba(240, 240, 240,.85);
+}
+.snake .left .map ul {
+    width: 600px;
+}
+.snake .left .map ul li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid skyblue;
+    float: left;
+    background-color: #fff;
+    text-align: center;
+}
+.snake .left .map ul li.s {
+    background-color: deepskyblue;
+}
+.snake .left .map ul li.food {
+    background-color: orangered;
+}
+.snake .right {
+    width: 320px;
+    float: left;
+    margin-left: 20px;
+    padding: 30px;
+}
+.snake .right .content {
+    width: 320px;
+    height: 200px;
+    background-color: rgba(240, 240, 240,.85);
+    margin-bottom: 10px;
+}
+.content .score {
+    height: 80px;
+    line-height: 80px;
+    padding: 0 15px;
+}
+.content .score span {
+    font-size: 40px;
+}
+.content .butt {
+    padding: 0 15px;
+}
+.content button {
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #e0e0e0;
+    padding: 0 15px;
+    cursor: pointer;
+    outline: none;
+}
+.content button.active {
+    background-color: deepskyblue;
+    color: #fff;
+}
+.content .downtime {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    font-size: 20px;
+}
+.content .downtime span {
+    color: deepskyblue;
+}
+.content .link {
+    display: block;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+}
