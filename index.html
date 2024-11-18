@@ -151,12 +151,12 @@
         }
 
         /* 图片悬停效果 */
-        
+
         .project img {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-       
+
         .project img:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -233,6 +233,7 @@
                 transform: translateY(0);
             }
         }
+      
     </style>
 
 </head>
@@ -253,7 +254,15 @@
         <div class="right">
             <h2>项目经验</h2>
 
-            <!-- Vue 2 项目 -->
+            <div class="project">
+                <img src="./web/images/img6.png" alt="项目图标"  class="img-circle">
+                <div>
+                    <h3>静态页面:一个家具网官网主页</h3>
+                    <p>html+css排版布局</p>
+                    <a href="./web/jiaj.html">查看代码</a>
+                </div>
+            </div>
+
             <div class="project">
                 <img src="./projectv1.0.0/images/1.jpg" alt="项目图标">
                 <div>
@@ -263,7 +272,6 @@
                 </div>
             </div>
 
-            <!-- Vue 3 项目 -->
             <div class=" project">
                         <img src="./projectv1.0.0/images/luyou.png" alt="项目图标">
                         <div>
@@ -273,38 +281,30 @@
                         </div>
                 </div>
 
-                <!-- 小程序项目 -->
+
+
+                <!-- UniApp 项目 -->
+                <div class=" project">
+                    <img src="https://via.placeholder.com/80" alt="项目图标">
+                    <div>
+                        <h3>UniApp 项目：跨平台社交应用</h3>
+                        <p>使用 UniApp 开发的跨平台社交应用,支持微信、支付宝、APP 等多个平台。</p>
+                        <a href="./demo.html">查看代码</a>
+                    </div>
+                </div>
+
+                <!-- 鸿蒙项目 -->
                 <div class="project">
                     <img src="https://via.placeholder.com/80" alt="项目图标">
                     <div>
-                        <h3>小程序项目：餐厅预订</h3>
-                        <p>一个餐厅预订的小程序，支持用户查看菜单、选择座位和提前预定。</p>
-                        <a href="./demo.html"">查看代码</a>
-                </div>
-            </div>
-
-            <!-- UniApp 项目 -->
-            <div class=" project">
-                            <img src="https://via.placeholder.com/80" alt="项目图标">
-                            <div>
-                                <h3>UniApp 项目：跨平台社交应用</h3>
-                                <p>使用 UniApp 开发的跨平台社交应用,支持微信、支付宝、APP 等多个平台。</p>
-                                <a href="./demo.html">查看代码</a>
-                            </div>
+                        <h3>鸿蒙项目：智能家居控制</h3>
+                        <p>基于鸿蒙系统开发的智能家居控制应用，支持远程控制家居设备、监控家居状态等。</p>
+                        <a href="./demo.html">查看代码</a>
                     </div>
-
-                    <!-- 鸿蒙项目 -->
-                    <div class="project">
-                        <img src="https://via.placeholder.com/80" alt="项目图标">
-                        <div>
-                            <h3>鸿蒙项目：智能家居控制</h3>
-                            <p>基于鸿蒙系统开发的智能家居控制应用，支持远程控制家居设备、监控家居状态等。</p>
-                            <a href="./demo.html">查看代码</a>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
+        </div>
 
 </body>
 
