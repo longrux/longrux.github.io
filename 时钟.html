@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本模板</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .circle {
+            width: 400px;
+            height: 400px;
+            border: 30px solid #dc6a34;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .circle .point {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -15px;
+            margin-top: -15px;
+            background-color: #dc6a34;
+            border-radius: 50%;
+            z-index: 10000;
+        }
+
+        .circle ul {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+
+        .circle ul li {
+            width: 400px;
+            height: 10px;
+            /* border: 1px solid #000;  */
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            margin-top: -5px;
+        }
+
+        .circle ul li::after,
+        .circle ul li::before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 5px;
+        }
+
+        /* 设置每一格的旋转角度 */
+        .circle ul li:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .circle ul li:nth-child(2) {
+            transform: rotate(30deg);
+        }
+
+        .circle ul li:nth-child(3) {
+            transform: rotate(60deg);
+        }
+
+        .circle ul li:nth-child(4) {
+            transform: rotate(90deg);
+        }
+
+        .circle ul li:nth-child(5) {
+            transform: rotate(120deg);
+        }
+
+        .circle ul li:nth-child(6) {
+            transform: rotate(150deg);
+        }
+
+
+        /* 设置转换锚点（圆心位置） */
+        .hour,
+        .minute,
+        .second {
+            transform-origin: center bottom;
+        }
+
+        .hour {
+            height: 100px;
+            width: 10px;
+            background-color: #000;
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            margin-left: -5px;
+            /* 测试 */
+            transform: rotate(0deg);
+        }
+
+        .minute {
+            height: 150px;
+            width: 6px;
+            background-color: #1f7539;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            margin-left: -3px;
+            /* 测试 */
+            transform: rotate(90deg);
+        }
+
+        .second {
+            height: 180px;
+            width: 4px;
+            background-color: #f00;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -2px;
+            /* 测试 */
+            transform: rotate(150deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle">
+        <div class="point"></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- 时针 -->
+        <div class="hour"></div>
+        <!-- 分针 -->
+        <div class="minute"></div>
+        <!-- 秒针 -->
+        <div class="second"></div>
+    </div>
+
+    <script>
+
+        // 编码：
+        // 1) 获取标签
+        var hour_element = document.querySelector(".hour");
+        var minute_element = document.querySelector(".minute");
+        var second_element = document.querySelector(".second");
+
+
+        // 2) 计算时、分、秒的角度
+        var loop = function(){
+            // 创建日期对象的实例
+            var date = new Date();
+            // 获取小时
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var ms = date.getMilliseconds();
+
+            // 获取超出小时、分钟、秒钟的所占的比例 
+            h = h + (m / 60)// 不足一小时占多少角度
+            m = m + (s / 60)// 不足一分钟占多少角度
+            s = s + (ms / 1000)// // 不足一秒占多少角度
+
+
+            // 设置标签的旋转角度
+            hour_element.style.transform = `rotate(${h * 30}deg)`;
+            minute_element.style.transform = `rotate(${m * 6}deg)`;
+            second_element.style.transform = `rotate(${s * 6}deg)`;
+        }
+
+        loop();
+        // 执行定时器函数
+        var timer = setInterval(loop, 1000);
+
+        // 总结：
+            // 1、dom操作（获取标签、设置标签的样式）
+            // 2、日期对象
+            // 3、定时器函数 间歇性执行函数
+    </script>
+</body>
+
+</html>

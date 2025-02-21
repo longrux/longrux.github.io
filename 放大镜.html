@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本模板</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* canvas标签 img标签 button input  audio video标签属于inline-block (这些标签都有文本空白) */
+        canvas {
+            /* display: block; */
+            vertical-align: middle;
+            /* background-color: red; */
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            min-height: 1000px;
+            
+            padding: 15px;
+        }
+
+        .container>div {
+            float: left;
+            /* background-color: red; */
+        }
+
+
+        .left {
+            cursor: crosshair;
+            position: relative;
+        }
+
+        .right {
+            display: none;
+            margin-left: 20px;
+            border: 1px solid #fff;
+        }
+
+        .left .mask {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 0, 0.2);
+            border: 1px solid orangered;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 容器标签 -->
+    <div class="container">
+        <!-- 鼠标在左边的盒子中做一些交互（鼠标移入移出移动等） -->
+        <div class="left">
+            <!-- img -->
+            <canvas id="bigCanvas"></canvas>
+            <div class="mask"></div>
+        </div>
+
+        <!-- 裁剪出来的图片在右侧渲染 -->
+        <div class="right">
+            <canvas id="smallCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- <img src="./catron.jpg" alt=""> -->
+    <script>
+        // 利用canvas标签，根据鼠标移动的信息实现裁剪图片，渲染图片（做一个放大镜的效果）。
+
+        // 编码：
+        const bigCanvas = document.querySelector("#bigCanvas");
+        const smallCanvas = document.querySelector("#smallCanvas");
+        const left_element = document.querySelector(".left");
+        const right_element = document.querySelector(".right");
+        const mask_element = document.querySelector(".mask");
+
+        // 定义全局变量 （左侧画布的尺寸）
+        let w, h;
+
+        // 设置右边画布的尺寸
+        smallCanvas.width = 400;
+        smallCanvas.height = 400;
+
+        // 获取画布标签的上下文对象
+        const bigCtx = bigCanvas.getContext("2d");
+        const smallCtx = smallCanvas.getContext("2d");
+        // console.log(smallCtx);
+
+        // 请求图片资源
+        const image = new Image();
+        image.src = "./catron.jpg";
+
+        // 加载图片的意思
+        image.onload = () => {
+            // 获取图片的尺寸
+            w = image.width
+            h = image.height
+
+            // 设置画布的尺寸
+            bigCanvas.width = w;
+            bigCanvas.height = h;
+
+            // 绘制图片
+            bigCtx.drawImage(
+                // 设置图片资源 
+                image,
+                //  在画布的坐标
+                0,
+                0,
+                //  在画布上的大小
+                w,
+                h
+            )
+        }
+
+
+
+        // 事件交互
+        // 鼠标移入left标签
+        left_element.addEventListener("mouseenter", () => {
+            // 显示遮罩层
+            mask_element.style.display = "block";
+            right_element.style.display = "block";
+        })
+
+        // 鼠标离开left标签
+        left_element.addEventListener("mouseleave", () => {
+            // 显示遮罩层
+            mask_element.style.display = "none";
+            right_element.style.display = "none";
+        })
+
+        // 鼠标在left标签上移动
+        left_element.onmousemove = event => {
+            // 获取left标签的坐标和尺寸
+            let oLeft = left_element.offsetLeft;
+            let oTop = left_element.offsetTop;
+            let oWidth = left_element.offsetWidth;
+            let oHeight = left_element.offsetHeight;
+
+            // 获取遮罩层标签的尺寸
+            let mWidth = mask_element.offsetWidth;
+            let mHeight = mask_element.offsetHeight;
+            // console.log({ oLeft, oTop, oWidth, oHeight, mWidth,mHeight})
+
+            // 计算mask标签的位置
+            let x = event.pageX - oLeft - mWidth / 2;
+            let y = event.pageY - oTop - mHeight / 2;
+
+            // 判断mask标签的移动范围
+            if (x < 0) x = 0;
+            if (x > (oWidth - mWidth)) x = oWidth - mWidth;
+            if (y < 0) y = 0;
+            if (y > (oHeight - mHeight)) y = oHeight - mHeight;
+
+            // 设置mask标签的位置
+            mask_element.style.left = x + "px";
+            mask_element.style.top = y + "px";
+
+            // 绘制被裁剪的图片（放大）
+            magnifier({
+                sx: x,
+                sy: y,
+                sw: mWidth,
+                sh: mHeight
+            })
+        }
+
+
+        // 编写函数（放大镜）
+        function magnifier(option) {
+            // console.log(option)
+            // 清除画布
+            smallCtx.clearRect(0, 0, smallCanvas.width, smallCanvas.height);
+
+            // 调用绘制图片的方法
+            smallCtx.drawImage(
+                image,
+                // 在图片上的坐标和尺寸
+                option.sx,
+                option.sy,
+                option.sw,
+                option.sh,
+                // 在画布上的坐标和尺寸
+                0,
+                0,
+                smallCanvas.width,
+                smallCanvas.height
+            )
+        }
+    </script>
+</body>
+
+</html>
